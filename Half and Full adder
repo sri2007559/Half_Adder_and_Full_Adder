@@ -1,0 +1,20 @@
+//VERILOG PROGRAM FOR HALF ADDER (DATA FLOW MODELING)
+
+module half_adder (A,B,Sum,Carry);
+ input A, B;
+ output Sum, Carry;
+ assign Sum = A ^ B; 
+ assign Carry = A & B; 
+endmodule
+
+//VERILOG PROGRAM FOR FULL ADDER(DATA FLOW MODELING)
+module full_adder (
+ input A,
+ input B,
+ input Cin,
+ output Sum,
+ output Cout
+);
+ assign Sum = A ^ B ^ Cin;
+ assign Cout = (A & B) | (B & Cin) | (A & Cin);
+endmodule
